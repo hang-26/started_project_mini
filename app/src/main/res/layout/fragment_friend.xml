@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context="authen_screen.fradment.FriendFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/friend"
+        android:textSize="@dimen/sp30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

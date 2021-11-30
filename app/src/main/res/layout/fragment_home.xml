@@ -1,0 +1,91 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="authen_screen.fradment.HomeFragment"
+    android:id="@+id/sRL_refresh"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:padding="@dimen/margin_10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:src="@drawable/ic_person"
+                    android:id="@+id/imv_avatar"
+                    android:layout_width="@dimen/marrgin_50dp"
+                    android:layout_height="@dimen/marrgin_50dp"/>
+
+
+                <EditText
+                    android:id="@+id/edt_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:layout_marginEnd="@dimen/margin_10dp"
+                    android:hint="You are feeling"
+                    android:background="@drawable/custom_editext"
+                    android:lines="3"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:inputType="textMultiLine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:id="@+id/imv_send"
+                    android:src="@drawable/ic_sent_mail"
+                    android:layout_gravity="top"
+                    android:layout_width="@dimen/dp30"
+                    android:layout_height="@dimen/dp30"/>
+            </LinearLayout>
+
+            <ViewFlipper
+                android:id="@+id/view_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:layout_marginTop="@dimen/padding_20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateDrawable="@drawable/custum_progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/padding_20dp"
+                    android:text="Not Data"
+                    android:textColor="@color/whitee"
+                    android:textSize="@dimen/size_20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/padding_20dp"
+                    android:text="connection errors . check transmission"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/size_20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </ViewFlipper>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
